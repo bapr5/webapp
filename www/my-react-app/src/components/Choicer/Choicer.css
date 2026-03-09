@@ -1,0 +1,51 @@
+/* Styles for Choicer component */
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 8px 0;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.btn-back {
+  background: #e0e0e0;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: #fff;
+  margin-left: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.btn-add {
+  background: #28a745;
+  color: #fff;
+  margin-left: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-right: 8px;
+  flex: 1;
+}

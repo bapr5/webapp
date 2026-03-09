@@ -6,7 +6,8 @@ export default function Sidebar({ open, onClose, currentPage, onNavigate }) {
   const pages = [
     { key: "home", label: "Главная" },
     { key: "about", label: "О приложении" },
-    { key: "profile", label: "Профиль" },
+    { key: "shows", label: "Сериалы" },
+    { key: "emojis", label: "Эмодзи" },
   ];
 
   return (

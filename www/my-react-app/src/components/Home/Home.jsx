@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Choicer from "../Choicer/Choicer";
 import classes from "./home.css";
+import Emojis from "../Emojis/Emojis";
 
 export function meta() {
   return [
@@ -45,11 +46,11 @@ export default function Home() {
         </>
       );
       break;
-    case "profile":
+    case "shows":
       pageContent = (
         <>
-          <h2>Профиль</h2>
-          <p>Здесь будет информация о пользователе.</p>
+          <h2>Сериалы</h2>
+          <p>Здесь будет информация о сериалах.</p>
           <Choicer onSelect={setSelectedChoice} />
           {selectedChoice && (
             <div style={{marginTop: 16, fontSize: 16}}>
@@ -59,6 +60,15 @@ export default function Home() {
           )}
         </>
       );
+      break;
+    case "emojis":
+     
+      pageContent= (
+        <>Test
+      <Emojis />
+    </>
+    );
+   
       break;
     default:
       pageContent = (

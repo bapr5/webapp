@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Подключаем плагин
+const CopyPlugin = require('copy-webpack-plugin'); // Плагин для копирования файлов
 
 module.exports = {
   entry: './src/index.jsx',
@@ -38,13 +39,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html', 
       filename: 'index.html' 
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/manifest.json', to: 'manifest.json' },
+        { from: 'public/service-worker.js', to: 'service-worker.js' },
+        { from: 'public/offline.html', to: 'offline.html' },
+        // Для тестирования - можете добавить иконки когда они будут готовы
+        // { from: 'public/icons', to: 'icons' }
+      ],
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
-    historyApiFallback: true
+    historyApiFallback: true,
+    headers: {
+      'Service-Worker-Allowed': '/'
+    }
   },
   mode: 'development'
 };

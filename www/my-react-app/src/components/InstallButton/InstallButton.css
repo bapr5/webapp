@@ -1,0 +1,45 @@
+.install-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.install-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+}
+
+.install-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(102, 126, 234, 0.4);
+}
+
+.install-icon {
+  font-size: 16px;
+}
+
+.install-text {
+  display: inline;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  .install-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .install-text {
+    display: none;
+  }
+}

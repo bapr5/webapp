@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Choicer from "../Choicer/Choicer";
 import classes from "./home.css";
 import Emojis from "../Emojis/Emojis";
+import InstallButton from "../InstallButton/InstallButton";
 
 export function meta() {
   return [
@@ -114,6 +115,8 @@ export default function Home() {
         </button>
         <span className={classes['header-logo']}>mob</span>
         <span style={{ verticalAlign: 'middle' }}>Приложение</span>
+                    <InstallButton />
+
       </header>
       <div style={{ padding: '20px' }}>
         {pageContent}
